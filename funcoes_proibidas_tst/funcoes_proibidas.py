@@ -1,48 +1,35 @@
-def replace_all(string, char_antes, char_depois):
-	string_to_list(string)
-	for i in range(0, len(string)):
-		if string[i] == char_antes:
-			string[i] = char_depois
-	list_to_string(string)	
+def my_replace(lista_string, char_antes, char_depois):
+    if type(lista_string) == str:
+        list(lista_string)
+
+    for i in range(len(lista_string)):
+        if lista_string[i] == char_before:
+            lista_string[i] = char_after
 
 
-def replace_once(string, char_antes, char_depois):
-	string_to_list(string)
-	for i in range(0, len(string)):
-		if string[i] == char_antes:
-			string[i] = char_depois
-			break
-	list_to_string(string)
+
+def my_filter(lista, elemento):
+    while i < len(lista):
+        if lista[i] == elemento:
+            lista.pop(i)
+        else:
+            i += 1
 
 
-def my_count(string, char_procurado):
-	contador = 0
-	for i in range(0, len(string)):
-		if string[i] == char_procurado:
-			contador += 1
-	return contador
+def my_count(string_lista, elemento):
+	counter = 0
+	for e in string_lista
+		if e == elemento:
+			counter += 1
+	return counter
 
 
-def my_index(string, char_procurado):
-	for i in range(0, len(string)):
-		if string[i] == char_procurado:
+def my_index(string_lista, elemento):
+	for i in range(0, len(string_lista)):
+		if string[i] == elemento:
 			return i
-		else:
-			return 'SUBSTRING NOT FOUND'
-
-
-def string_to_list(string):
-	lista = []
-	for i in range(0, len(string)):
-		lista.append(string[i])
-	string = lista
-
-
-def list_to_string(lista):
-	string = ''
-	for i in range(0, len(lista)):
-		string = string + lista[i]
-	lista = string
+	
+        return -1
 
 
 def my_in(lista, elemento):
@@ -62,15 +49,10 @@ def my_slice(eh_lista, str_list, comeco, fim):
         for i in range(comeco, fim):
             str_aux += str_list[i]
 
+
 def my_remove(lista, elemento):
     for i in range(len(lista)):
         if lista[i] == elemento:
             lista.pop(i)
             break
 
-def my_remove_all(lista, elemento):
-    while i < len(lista):
-        if lista[i] == elemento:
-            lista.pop(i)
-        else:
-            i += 1
